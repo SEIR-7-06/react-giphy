@@ -39,9 +39,12 @@ const searchObj = {
       "offset": 0
     }
   }
+let apiKey = process.env.REACT_APP_GIPHY_API_KEY
+console.log(apiKey)
 
 
 class SearchContainer extends Component {
+
     constructor() {
         super()
         this.state = {
@@ -55,8 +58,12 @@ class SearchContainer extends Component {
         let searchRunResults = searchObj.data.map((elem) => {
             if (elem.source.includes(captSearch.toLowerCase())) {
                 return elem.images.fixed_height.url
+            } else {
+                return 0
             }
         })
+
+        console.log(searchRunResults)
 
         this.setState({
             searchValue: captSearch,
