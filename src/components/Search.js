@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Search extends Component {
     render() {
         return (
-            <h1>Hello -- testing</h1>
+            <input type="text" value={this.props.searchValue} onChange={this.props.runSearch} />
         )
     }
 }

@@ -3,7 +3,9 @@ import React, { Component } from 'react'
 class Result extends Component {
     render() {
         return (
-            <h1>Result -- testing</h1>
+            <li>
+                <img src={this.props.imgSrc} />
+            </li>
         )
     }
 }
