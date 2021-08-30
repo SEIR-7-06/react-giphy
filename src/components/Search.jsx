@@ -11,12 +11,20 @@ class Search extends React.Component {
         this.setState({inputVal: event.target.value })
 
     }
+
+    handleFormSubmit = (event) => {
+        // prevent default behavior of submitting a form
+        event.preventDefault()
+        console.log('form submitted');
+
+        this.props.fetchGifs()
+    }
     
     render() {
 
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleFormSubmit}>
                     <input
                         type="text" 
                         value={this.state.inputVal}
