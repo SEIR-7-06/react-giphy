@@ -17,7 +17,7 @@ class Search extends React.Component {
         event.preventDefault()
         console.log('form submitted');
 
-        this.props.fetchGifs()
+        this.props.fetchGifs(event.target.value)
     }
     
     render() {
