@@ -16,8 +16,8 @@ class Search extends React.Component {
         // prevent default behavior of submitting a form
         event.preventDefault()
         console.log('form submitted');
-
-        this.props.fetchGifs(event.target.value)
+        
+        this.props.setSearch(event.target.value)
     }
     
     render() {

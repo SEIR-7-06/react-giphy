@@ -1,22 +1,29 @@
-import { Grid } from '@giphy/react-components'
-import { GiphyFetch } from '@giphy/js-fetch-api'
 import React from 'react'
 import Search from './Search'
 import Results from './Results'
 
 class SearchContainer extends React.Component {
     state = {
+        query: " ",
         searchResults: []
     }
 
+    setSearch = (searchTerm) => {
+        this.setState({
+            query: searchTerm
+        })
+        this.fetchGifs()
+    }
     
     // Function in charge of updating state
-    fetchGifs = (search) => {
+    fetchGifs = () => {
         
-        const url = `api.giphy.com/v1/gifs/search?api_key=d5J78KLvZyaN8RZeGtsc90BCb37kyJzt&limit=10&q=`
-        fetch(url + search)
+        const url = `api.giphy.com/v1/gifs/search?
+        api_key=d5J78KLvZyaN8RZeGtsc90BCb37kyJzt&limitq=${this.state.query}`
+        fetch(url)
             .then((res) => {
                 return res.json
+                
             })
             .then(data => {
                 console.log(data);
@@ -27,7 +34,7 @@ class SearchContainer extends React.Component {
             .catch(()=>{
                 alert('something went wrong')
             })
-        
+            console.log(url)
        
     }
     
@@ -39,7 +46,7 @@ class SearchContainer extends React.Component {
         return (
             <div>Search Container
 
-            <Search  fetchGifs={this.fetchGifs} />
+            <Search  setSearch={this.setSearch} />
             <Results />
             </div>
         
