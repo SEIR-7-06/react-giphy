@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+body {
+    background-image: url('../../images/noita-digital-zcx5ztIjQAM-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: 'Source Sans Pro'
+}
+.title {
+    margin-top: 30px;
+    font-size: 2.5rem;
+}
+
+
+.grid-gallery {
+    display: inline-flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: space-between;
+    margin: 6px;
+    gap:12px;
+}
+
+.single-image {
+    border: .5px solid black;
+    box-shadow: 10px 0px 14px -7px;
+}
+
+.input {
+    font-size: 16px;
+    padding: 5px 25px;
+    color:white;
+    background: black;
+    outline:none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px;
+}
+
+.btn {
+    color:white;
+    background: black;
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 4px;
+}
