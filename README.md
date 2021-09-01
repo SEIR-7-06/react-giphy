@@ -34,7 +34,7 @@ Your app should take a user input and search the following JS object and return 
 <details><summary>click for js object</summary>
 
 ```js
-{
+{ 
   "data": [
     {
       "type": "gif",
