@@ -1,0 +1,19 @@
+*{
+  background-color: slategray;
+}
+.App{
+  text-align: center;
+  
+}
+.searchbar {
+  text-align: center;
+  background-color: darkgray;
+  padding-top:0.2em;
+  padding-bottom: 1em;
+}
+
+.parent {
+  display:inline-grid;
+  padding: 0.25em
+}
+
