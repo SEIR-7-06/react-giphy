@@ -1,11 +1,11 @@
 import React from 'react'
+// import './results.css'
 
 class Results extends React.Component {
 
     render() {
         return (
             <>
-                <p>Place holder for now</p>
                 {this.props.searchResults()}
             </>
         )

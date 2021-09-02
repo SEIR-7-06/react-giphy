@@ -1,6 +1,7 @@
 import Search from './Search'
 import Results from './Results'
 import React from 'react'
+import './results.css'
 
 /* --------- apiKey = VCmesYt2CSf2PsUbmNl2l68MpQDRUAvK --------------- */
 
@@ -28,8 +29,10 @@ class SearchContainer extends React.Component {
     searchResults = () => {
         let searchedGifs = this.state.resultVal.map((gif, idx) => {
             return (
-                <div key={idx}> 
-                    <img src={gif.images.original.url} />     
+                <div  className="gifsContainer">
+                    <div key={idx}  className="gifsDiv"> 
+                        <img src={gif.images.original.url} className="gifs" />     
+                    </div>
                 </div>
             )
         })

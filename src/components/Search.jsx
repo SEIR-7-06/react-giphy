@@ -7,25 +7,27 @@ class Search extends React.Component {
 
     handleChange = (e) => {
         this.setState({ searchVal: e.target.value })
+        console.log(this.state.searchVal)
+        this.props.fetchGifs(this.state.searchVal + e.target.value[e.target.value.length - 1]);
     }
 
-    handleFormSub = (e) => {
-        e.preventDefault();
-        console.log("form was submitted");
-        this.props.fetchGifs(this.state.searchVal);
-    }
+    // handleFormChange = (e) => {
+    //     e.preventDefault();
+    //     console.log("form was submitted");
+        
+    // }
 
     render() {
         return (
             <div>
-                <form onSubmit={this.handleFormSub}>
+                <form>
                     <input
                         type="text"
                         placeholder="Search Gifs"
                         value={this.state.searchVal}
                         onChange={this.handleChange}
                     />
-                    <input type="submit" value="Search" />
+                    {/* <input type="submit" value="Search" /> */}
                 </form>
             </div>
         )
